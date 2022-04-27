@@ -6,7 +6,7 @@ int main(int argc, char *argv[]) {
   if (rta == 'y') {
     //Enunciados
     printf("Si\n");
-  } else gif (rta == 'n'){
+  } else if (rta == 'n'){
     printf("No\n");
     } else {
     printf("Respuesta invalida\n");
