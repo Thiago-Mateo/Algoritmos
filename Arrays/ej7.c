@@ -3,10 +3,10 @@
 
 int main(int argc, char *argv[]) {
 
-  int n = atoi(argv[1]);
-  int m = atoi(argv[2]);
+  int n = atoi(argv[1]); //Longitud del array
+  int m = atoi(argv[2]); //Longitud de los valores de numbers
   int numbers[n];
-  int freq[m];
+  int freq[m]; 
 
   for(int i = 0; i < m; i++){
     freq[i] = 0;
