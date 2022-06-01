@@ -8,9 +8,20 @@ int main(int argc, char *argv[]) {
     printf("Error\n");
     return 0;
   } else if(n == 1){
-    printf("%d Es primo\n", n);
+    printf("%d es primo\n", n);
+    return 0;
+  } else if(n == 2){
+    printf("%d es primo\n", n);
     return 0;
   }
+  for(int i = n - 1; i > 1; i--){
+    if(n % i == 0){
+      printf("%d no es primo\n", n);
+      return 0;
+    }
+
+  }
+  printf("%d es primo\n", n);
 
   return 0;
 }
