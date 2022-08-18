@@ -1,18 +1,26 @@
-//Completar
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 
-int main(int argc, char *argv[]) {
+int main(void) {
 
   FILE *fp;
-  fp = fopen("prac.txt", "r");
-  char file[200];
-  int i = 0;
-  while (fgets(file, 200, fp) != NULL) {
-    if(file[i] == " "){
-
+  FILE *fpw;
+  int c;
+  fp = fopen("txt.txt", "r");
+  fpw = fopen("envi.txt", "w");
+  do{
+    c = fgetc(fp);
+    if(c == ' '  || c == '\t' || c == '\n' || c == EOF){
+    } else {
+      fputc(c, fpw);
     }
-  }
+    if(feof(fp)){
+      break;
+    }
+  }while(1);
+  fclose(fp);
+  fclose(fpw);
+
+  
   return 0;
 }
