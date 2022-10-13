@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int binary_search(int lo, int hi){
+int binary_search_r(int lo, int hi){
   if(hi - lo == 1) return lo;
   int mid = lo + (hi - lo) / 2;
   printf("Igual o más grande que %d? s/n\n", mid);
@@ -13,6 +13,21 @@ int binary_search(int lo, int hi){
   else
     return binary_search(mid, hi);
 }
+
+// int binary_search(int lo, int hi){
+//   while(hi - lo != 1){
+//   int mid = lo + (hi - lo) / 2;
+//   printf("Igual o más grande que %d? s/n\n", mid);
+//   char response;
+//   scanf("%c", &response);
+//   getchar();
+//   if(response == 'n')
+//     hi = mid;
+//   else
+//     lo = mid;
+//   }
+//   return lo;
+// }
 
 int main(int argc, char *argv[]){
   int min;

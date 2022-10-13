@@ -7,7 +7,7 @@ int swap(int array[], int a, int b){
   array[b] = t;
 }
 
-int ordenar(int array[], int lenght){
+int order(int array[], int lenght){
   for(int i = 1; i < lenght; i++){
     for(int j = i; j > 0; j--){
       if(array[j] < array[j-1]) swap(array, j, j - 1);
